@@ -42,6 +42,7 @@
             this.buttonMentes = new System.Windows.Forms.Button();
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.dateTimePickerSzulDat = new System.Windows.Forms.DateTimePicker();
+            this.saveFileDialogMentes = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // labelNev
@@ -85,13 +86,11 @@
             // radioButtonNemF
             // 
             this.radioButtonNemF.AutoSize = true;
-            this.radioButtonNemF.Checked = true;
             this.radioButtonNemF.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonNemF.Location = new System.Drawing.Point(202, 119);
             this.radioButtonNemF.Name = "radioButtonNemF";
             this.radioButtonNemF.Size = new System.Drawing.Size(43, 30);
             this.radioButtonNemF.TabIndex = 5;
-            this.radioButtonNemF.TabStop = true;
             this.radioButtonNemF.Text = "F";
             this.radioButtonNemF.UseVisualStyleBackColor = true;
             // 
@@ -160,6 +159,7 @@
             this.buttonHozzaad.TabIndex = 11;
             this.buttonHozzaad.Text = "Hozzáad";
             this.buttonHozzaad.UseVisualStyleBackColor = false;
+            this.buttonHozzaad.Click += new System.EventHandler(this.buttonHozzaad_Click);
             // 
             // buttonMentes
             // 
@@ -172,6 +172,7 @@
             this.buttonMentes.TabIndex = 12;
             this.buttonMentes.Text = "Mentés";
             this.buttonMentes.UseVisualStyleBackColor = false;
+            this.buttonMentes.Click += new System.EventHandler(this.buttonMentes_Click);
             // 
             // buttonBetoltes
             // 
@@ -191,11 +192,19 @@
             this.dateTimePickerSzulDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerSzulDat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerSzulDat.Location = new System.Drawing.Point(202, 66);
-            this.dateTimePickerSzulDat.MaxDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerSzulDat.MaxDate = new System.DateTime(2020, 10, 27, 0, 0, 0, 0);
+            this.dateTimePickerSzulDat.MinDate = new System.DateTime(1850, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerSzulDat.Name = "dateTimePickerSzulDat";
             this.dateTimePickerSzulDat.Size = new System.Drawing.Size(197, 32);
             this.dateTimePickerSzulDat.TabIndex = 4;
             this.dateTimePickerSzulDat.Value = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
+            // 
+            // saveFileDialogMentes
+            // 
+            this.saveFileDialogMentes.DefaultExt = "txt";
+            this.saveFileDialogMentes.FileName = "regisztracio";
+            this.saveFileDialogMentes.Filter = "Szövegfájl (*.txt)|*txt|Minden fájl (*.*)|*.*";
+            this.saveFileDialogMentes.RestoreDirectory = true;
             // 
             // Form1
             // 
@@ -219,6 +228,7 @@
             this.Controls.Add(this.labelNev);
             this.Name = "Form1";
             this.Text = "Regisztráció";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +250,7 @@
         private System.Windows.Forms.Button buttonMentes;
         private System.Windows.Forms.Button buttonBetoltes;
         private System.Windows.Forms.DateTimePicker dateTimePickerSzulDat;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogMentes;
     }
 }
 
