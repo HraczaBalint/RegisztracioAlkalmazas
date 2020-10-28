@@ -43,6 +43,7 @@
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.dateTimePickerSzulDat = new System.Windows.Forms.DateTimePicker();
             this.saveFileDialogMentes = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialogBetoltes = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // labelNev
@@ -185,6 +186,7 @@
             this.buttonBetoltes.TabIndex = 13;
             this.buttonBetoltes.Text = "Betöltés";
             this.buttonBetoltes.UseVisualStyleBackColor = false;
+            this.buttonBetoltes.Click += new System.EventHandler(this.buttonBetoltes_Click);
             // 
             // dateTimePickerSzulDat
             // 
@@ -205,6 +207,12 @@
             this.saveFileDialogMentes.FileName = "regisztracio";
             this.saveFileDialogMentes.Filter = "Szövegfájl (*.txt)|*txt|Minden fájl (*.*)|*.*";
             this.saveFileDialogMentes.RestoreDirectory = true;
+            // 
+            // openFileDialogBetoltes
+            // 
+            this.openFileDialogBetoltes.FileName = "regisztracio";
+            this.openFileDialogBetoltes.Filter = "Szövegfájl (*.txt)|*txt|Minden fájl (*.*)|*.*";
+            this.openFileDialogBetoltes.RestoreDirectory = true;
             // 
             // Form1
             // 
@@ -251,6 +259,7 @@
         private System.Windows.Forms.Button buttonBetoltes;
         private System.Windows.Forms.DateTimePicker dateTimePickerSzulDat;
         private System.Windows.Forms.SaveFileDialog saveFileDialogMentes;
+        private System.Windows.Forms.OpenFileDialog openFileDialogBetoltes;
     }
 }
 
